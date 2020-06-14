@@ -38,7 +38,8 @@ console.log(`Is Mark's BMI higher than John's? It is ${markBMIHigherThanJohn}`)
 Coding Challange #2
 
 John and Mike both play basketball in different teams. 
-In the last 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+In the last 3 games, John's team scored 89, 120 and 103 points, 
+while Mike's team scored 116, 94 and 123 points.
 
 1. Calculate the average score for each team
 2. Decide which team wins by highest average score and print the winner to the console. Also include the winning average score. 
@@ -49,9 +50,36 @@ In the last 3 games, John's team scored 89, 120 and 103 points, while Mike's tea
 Note: I'm gonna respond to the coding challange by including Mary from the beginning and build one coding logic.
 
 */
+console.log("Coding Challange 2")
 
+var johnAverage = (97 + 134 + 105) / 3
+var mikeAverage = (97 + 134 + 105) / 3
+var maryAverage = (97 + 134 + 105) / 3
 
+//(89 + 120 + 103) / 3 --> John original points (104)
+//(116 + 94 + 123) / 3 --> Mike original points (111)
+//(97 + 134 + 105) / 3 --> Mary original points (112)
 
+console.log(`John's team average points is ${johnAverage}`)
+console.log(`Mike's team average points is ${mikeAverage}`)
+console.log(`Mary's team average points is ${maryAverage}`)
 
+if (johnAverage > mikeAverage && johnAverage > maryAverage){
+  console.log(`John's team wins! with ${johnAverage} average points`)
+} else if (mikeAverage > johnAverage && mikeAverage > maryAverage){
+  console.log(`Mike's team wins! with ${mikeAverage} average points`)
+} else if (maryAverage > johnAverage && maryAverage > mikeAverage){
+  console.log(`Mary's team wins! with ${maryAverage} average points`)
+} else if (mikeAverage == johnAverage && mikeAverage > maryAverage){
+  console.log(`We have a share winner! Mike's and John's team win with ${mikeAverage} average points`)
+} else if (mikeAverage == maryAverage && mikeAverage > johnAverage){
+  console.log(`We have a share winner! Mike's and Mary's team win with ${mikeAverage} average points`)
+} else if (maryAverage == johnAverage && maryAverage > mikeAverage){
+  console.log(`We have a share winner! Mary's and John's team win with ${maryAverage} average points`)
+} else {
+  console.log(`All three teams draw with ${maryAverage} average points`)
+}
+
+//note: I wonder if I can add a test to check whether the logic is correct
 
 
