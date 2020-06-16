@@ -88,7 +88,7 @@ if (johnAverage > mikeAverage && johnAverage > maryAverage){
 Coding Challange #3
 
 John and his family went on a holiday and went to 3 different restaurants. 
-The bills were #124, $48 and $268
+The bills were $124, $48 and $268
 
 To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 
 20% of the bill when the bill is less than $50, 
@@ -99,10 +99,13 @@ In the end, John would like to have 2 arrays,
 1) Containing all three tips
 2) Containing all three final paid amounts (bill + tip).
 
+Questions
+1) Create a tip calculator function
+2) Create all an array of bills, tips and total paid amounts
+
 */
 
-var tips = []
-var paidAmounts = []
+console.log("Coding Challange 3")
 
 function tipCalc(bill){
   var tip
@@ -115,14 +118,24 @@ function tipCalc(bill){
     tip = bill * 0.1
   }
 
-  tips.push(tip)
-  paidAmounts.push(tip + bill)
-
+  return tip
 }
 
-tipCalc(124)
-tipCalc(48)
-tipCalc(268)
+var bills = [124, 48, 268]
 
-console.log(tips)
-console.log(paidAmounts)
+var tips = [tipCalc(bills[0]),
+            tipCalc(bills[1]),
+            tipCalc(bills[2])]
+
+var paidAmounts = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]]
+
+console.log(`This is an array of tips: ${tips}`)
+console.log(`This is an array of total paid amounts: ${paidAmounts}`)
+//tipCalc(124)
+// tipCalc(48)
+// tipCalc(268)
+
+// console.log(tips)
+// console.log(paidAmounts)
