@@ -87,9 +87,10 @@ if (johnAverage > mikeAverage && johnAverage > maryAverage){
 
 Coding Challange #3
 
-John and his family went on a holiday and went to 3 different restaurants. The bill were #124, $48 and $268
+John and his family went on a holiday and went to 3 different restaurants. 
+The bills were #124, $48 and $268
 
-To tip the waiter a fair amound, John created a simple tip calculator (as a function). He likes to tip 
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 
 20% of the bill when the bill is less than $50, 
 15% of the bill is between $50 and $200,
 and 10% if the bill is more than $200.
@@ -98,6 +99,30 @@ In the end, John would like to have 2 arrays,
 1) Containing all three tips
 2) Containing all three final paid amounts (bill + tip).
 
-
-
 */
+
+var tips = []
+var paidAmounts = []
+
+function tipCalc(bill){
+  var tip
+
+  if (bill < 50){
+    tip = bill * 0.2
+  } else if (bill >= 50 && bill < 200){
+    tip = bill * 0.15
+  } else {
+    tip = bill * 0.1
+  }
+
+  tips.push(tip)
+  paidAmounts.push(tip + bill)
+
+}
+
+tipCalc(124)
+tipCalc(48)
+tipCalc(268)
+
+console.log(tips)
+console.log(paidAmounts)
