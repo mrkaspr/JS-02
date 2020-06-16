@@ -133,9 +133,4 @@ var paidAmounts = [bills[0] + tips[0],
 
 console.log(`This is an array of tips: ${tips}`)
 console.log(`This is an array of total paid amounts: ${paidAmounts}`)
-//tipCalc(124)
-// tipCalc(48)
-// tipCalc(268)
 
-// console.log(tips)
-// console.log(paidAmounts)
