@@ -184,3 +184,36 @@ if (johnObject.calcBMI() > markObject.calcBMI()){
 
 console.log('==================================================================')
 
+/*
+
+Coding challange #5
+
+Let's create a more advance version of tip calculator!
+
+This time John and his family went to 5 different restaurants
+The bills were $124, $48, $268, $180 and $42
+John likes to tip 20% of the bill when the bill is less than $50
+15% when the bill is between $50 and $200 and 10% if the bill is more than $200
+
+Implement a tip calculator using objects and loops:
+1. Create an object with an array for the bill values. 
+2. Add a method to calculate the tip.
+3. This method should include a loop to iterate over all paid bills
+and do the tip calculations
+4. As an output, create,
+a) A new array containing all tips
+b) an array containing final paid amounts (bill + tip)
+
+BONUS!: Mark's family also went on a holiday going to 4 different restaurants.
+The bill were $77, $375 $110 and $45.
+Mark likes to tip 20% of the bill when the bill is less than $100,
+10% when the bill is between $100 and $300, and 25% when the bill is more than $300
+
+5. Do question 1 - 4 with Mark tipping rules
+6. Create a function to calculate the average of a given array of tips.
+7. Calculate the average tip for each famiily
+8. Log to the console which family paid the highest tip on average
+
+*/
+
+console.log("Coding Challange 5")
