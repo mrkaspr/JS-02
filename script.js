@@ -32,6 +32,7 @@ var markBMIHigherThanJohn = markBMI > johnBMI
 
 //4. Print a message to consol containing variable from step 3. (eg. "Is Mark's BMI higher than John's? true")
 console.log(`Is Mark's BMI higher than John's? It is ${markBMIHigherThanJohn}`)
+console.log('==================================================================')
 
 /*
 
@@ -79,6 +80,7 @@ if (johnAverage > mikeAverage && johnAverage > maryAverage){
 } else {
   console.log(`All three teams draw with ${maryAverage} average points`)
 }
+console.log('==================================================================')
 
 //note: I wonder if I can add a test to check whether the logic is correct
 
@@ -96,12 +98,12 @@ To tip the waiter a fair amount, John created a simple tip calculator (as a func
 and 10% if the bill is more than $200.
 
 In the end, John would like to have 2 arrays,
-1) Containing all three tips
-2) Containing all three final paid amounts (bill + tip).
+1. Containing all three tips
+21 Containing all three final paid amounts (bill + tip).
 
 Questions
-1) Create a tip calculator function
-2) Create all an array of bills, tips and total paid amounts
+1. Create a tip calculator function
+2. Create all an array of bills, tips and total paid amounts
 
 */
 
@@ -133,4 +135,52 @@ var paidAmounts = [bills[0] + tips[0],
 
 console.log(`This is an array of tips: ${tips}`)
 console.log(`This is an array of total paid amounts: ${paidAmounts}`)
+console.log('==================================================================')
+
+
+/*
+
+Coding challange #4
+
+Referring to coding challange 1 where Mark and John compared their BMIs.
+Let's now implement the same functionality with objects and methods.
+
+1. For each of the item, create an object with properties for their full name,
+mass and height.
+2. Then, add a method to each object to calculate the BMI
+3. Save the BMI into the object and also return it from the method
+4. In the end, log the console who has the highest BMI including full name and 
+respective BMI. Don't forget they might have the same BMI.
+
+*/
+
+console.log("Coding Challange 4")
+
+var johnObject = {
+  fullname : 'John Smith',
+  mass: 80,
+  height: 1.8,
+  calcBMI: function(){
+    return this.BMI = this.mass / (this.height * this.height)
+  }
+}
+
+var markObject = {
+  fullname : 'Mark Twain',
+  mass: 70,
+  height: 1.7,
+  calcBMI: function(){
+    return this.BMI = this.mass / (this.height * this.height)
+  }
+}
+
+if (johnObject.calcBMI() > markObject.calcBMI()){
+  console.log(`${johnObject.fullname} has a bigger BMI at ${johnObject.BMI} `)
+} else if (markObject.calcBMI() > johnObject.calcBMI()){
+  console.log(`${markObject.fullname} has a bigger BMI at ${markObject.BMI} `)
+} else {
+  console.log(`Both BMIs are the same!`)
+}
+
+console.log('==================================================================')
 
