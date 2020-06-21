@@ -217,3 +217,83 @@ Mark likes to tip 20% of the bill when the bill is less than $100,
 */
 
 console.log("Coding Challange 5")
+
+/* I'm going to name the object johnObject5 to differentiate the object with others that is used
+in previous coding challange */
+
+var johnObject5 = {
+ fullName: 'John Smith',
+ bills: [124, 48, 268, 180, 42],
+ tipCalc: function(){
+    
+    this.tips = []
+    this.paidAmounts = []
+
+    for (var i = 0; i < this.bills.length; i++){
+      var percentage
+      var bill = this.bills[i]
+
+      if (bill < 50){
+        percentage = 0.2
+      } else if (bill >= 50 && bill < 200){
+        percentage = 0.15
+      } else {
+        percentage = 0.1
+      }
+
+      this.tips[i] = bill * percentage
+      this.paidAmounts[i] = this.tips[i] + bill
+    }
+ }
+}
+
+var markObject5 = {
+  fullName: 'Mark Twain',
+  bills: [77, 375, 110, 45],
+  tipCalc: function(){
+     
+     this.tips = []
+     this.paidAmounts = []
+ 
+     for (var i = 0; i < this.bills.length; i++){
+       var percentage
+       var bill = this.bills[i]
+ 
+       if (bill < 100){
+         percentage = 0.2
+       } else if (bill >= 100 && bill < 200){
+         percentage = 0.1
+       } else {
+         percentage = 0.25
+       }
+ 
+       this.tips[i] = bill * percentage
+       this.paidAmounts[i] = this.tips[i] + bill
+     }
+  }
+ }
+
+ johnObject5.tipCalc()
+ markObject5.tipCalc()
+
+ function calcAvg (tips){
+  var totalTips = 0
+
+  for (var i = 0; i < tips.length; i++){
+    totalTips += tips[i]
+  }
+
+  return totalTips / tips.length
+ }
+
+ var johnTipAvg = calcAvg(johnObject5.tips)
+ var markTipAvg = calcAvg(markObject5.tips)
+
+ if (johnTipAvg > markTipAvg){
+  console.log(`John gives more tips!`)
+ } else if (markTipAvg > johnTipAvg){
+  console.log(`Mark gives more tips!`)
+ } else {
+  console.log(`Both John and Mark gives the same amout of tips!`)
+ }
+
